@@ -1,0 +1,48 @@
+#include <iostream>
+
+//spraincarca <<,>> pentru ecran si fisier
+//citirea completa memorarea si afisarea a n obiecte
+//simulare de multimi cu duplicate
+//class multime:
+//               -vector in multime (sterg duplicate din vect)
+//               -supraincarcare <<,>>
+//               -reuniune a doua multimi (supraincarcare +)
+//               -intersectie a doua multimi (supraincarcare *)
+//               -diferenta a doua multimi (supraincarcare -)
+//clasa pereche de int
+//clasa multime de perechi de nr intregi(reprezentata ca vector de perechi) prietena a pereche
+//                -supraincarcare si la perechi si multime de perechi
+//
+//functie produs cartezian de doua multimi si il stocheaza in multime de perechi
+
+using namespace std;
+
+class   Rectangle
+{
+    int     width, height;
+  public:
+    void    set_values(int x,int y)
+    {
+        width   = x;
+        height  = y;
+    }
+    int     area(){return width*height;}
+    int     operator-(const Rectangle& second)
+    {
+        //Rectangle r;
+        return this->width - second.width;
+        //return r;
+    }
+};
+
+int     main () {
+  Rectangle rect1, rect2, rect3;
+  int       sum = 0;
+  rect1.set_values(3,1);
+  rect2.set_values(7,1);
+  sum = rect1 - rect2;
+  cout << "rect1 width: " << rect1.area();
+  cout << "\nrect2 width: " << rect2.area();
+  cout << "\nrect3 width: " << sum;
+  return 0;
+}

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1553554262 source:e:\programming\fmi\poo\proiect1_tema7\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+
